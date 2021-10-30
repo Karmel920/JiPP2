@@ -33,7 +33,9 @@ int main(int argc, char *argv[]) {
     string typeMatrix;
     typeMatrix = argv[1];
 
-    if(!strcmp(argv[2], "addMatrix"))
+    if(!strcmp(argv[1], "help"))
+        help();
+    else if(!strcmp(argv[2], "addMatrix"))
         DoAddMatrix(typeMatrix);
     else if(!strcmp(argv[2], "subtractMatrix"))
         DoSubtractMatrix(typeMatrix);
