@@ -30,10 +30,20 @@ using namespace std;
 
 int main(int argc, char *argv[]) {
 
+    if(argc == 1) {
+        cout << "NIE PODANO ARGUMENTOW" << endl << endl;
+        help();
+        return 0;
+    }
+
     string typeMatrix;
     typeMatrix = argv[1];
 
-    if(!strcmp(argv[1], "help"))
+    if(argc != 3 && strcmp(argv[1], "help")) {
+        cout << "BLAD, zly badz zla ilosc parametrow" << endl << endl;
+        help();
+    }
+    else if(!strcmp(argv[1], "help"))
         help();
     else if(!strcmp(argv[2], "addMatrix"))
         DoAddMatrix(typeMatrix);
@@ -441,7 +451,7 @@ void DoTranspozeMatrix(string typeMatrix)
     if(typeMatrix.compare("int") == 0)
     {
         int **matrixA = createIntMatrix(rows, columns);
-        int **matrixC = createIntMatrix(rows, columns);
+        int **matrixC = createIntMatrix(columns, rows);
 
         cout << "Podaj wartosci macierzy A: " << endl;
         checkInput(matrixA, rows, columns);
@@ -449,15 +459,15 @@ void DoTranspozeMatrix(string typeMatrix)
         matrixC = transpozeMatrix(matrixA, rows, columns);
 
         cout << endl << "Wynik: " << endl;
-        printMatrix(matrixC, rows, columns);
+        printMatrix(matrixC, columns, rows);
 
         destroyMatrix(matrixA, rows, columns);
-        destroyMatrix(matrixA, rows, columns);
+        destroyMatrix(matrixC, columns, rows);
     }
     else if(typeMatrix.compare("double") == 0)
     {
         double **matrixA = createDoubleMatrix(rows, columns);
-        double **matrixC = createDoubleMatrix(rows, columns);
+        double **matrixC = createDoubleMatrix(columns, rows);
 
         cout << "Podaj wartosci macierzy A: " << endl;
         checkInput(matrixA, rows, columns);
@@ -465,10 +475,10 @@ void DoTranspozeMatrix(string typeMatrix)
         matrixC = transpozeMatrix(matrixA, rows, columns);
 
         cout << endl << "Wynik: " << endl;
-        printMatrix(matrixC, rows, columns);
+        printMatrix(matrixC, columns, rows);
 
         destroyMatrix(matrixA, rows, columns);
-        destroyMatrix(matrixC, rows, columns);
+        destroyMatrix(matrixC, columns, rows);
     }
     else
     {

@@ -126,9 +126,9 @@ double **multiplyByScalar(double **matrixA, int rows, int columns, double scalar
 
 int **transpozeMatrix(int **matrixA, int rows, int columns)
 {
-    int **matrixT = new int *[rows];
-    for(int i = 0; i < rows; i++)
-        matrixT[i] = new int[columns];
+    int **matrixT = new int *[columns];
+    for(int i = 0; i < columns; i++)
+        matrixT[i] = new int[rows];
 
     for(int i = 0; i < rows; i++) {
         for(int j = 0; j < columns; j++) {
@@ -141,9 +141,9 @@ int **transpozeMatrix(int **matrixA, int rows, int columns)
 
 double **transpozeMatrix(double **matrixA, int rows, int columns)
 {
-    double **matrixT = new double *[rows];
-    for(int i = 0; i < rows; i++)
-        matrixT[i] = new double[columns];
+    double **matrixT = new double *[columns];
+    for(int i = 0; i < columns; i++)
+        matrixT[i] = new double[rows];
 
     for(int i = 0; i < rows; i++) {
         for(int j = 0; j < columns; j++) {
