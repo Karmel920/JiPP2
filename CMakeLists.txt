@@ -8,6 +8,7 @@ add_subdirectory(matrixLib)
 add_subdirectory(matrixApp)
 add_subdirectory(firstClass)
 add_subdirectory(struct_example)
+add_subdirectory(CopyingConstructor)
 
 
 
