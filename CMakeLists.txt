@@ -9,6 +9,8 @@ add_subdirectory(matrixApp)
 add_subdirectory(firstClass)
 add_subdirectory(struct_example)
 add_subdirectory(CopyingConstructor)
+add_subdirectory(Operators)
+add_subdirectory(Dziedziczenie)
 
 
 
