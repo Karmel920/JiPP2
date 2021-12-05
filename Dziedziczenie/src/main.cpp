@@ -23,3 +23,5 @@ int main() {
     cout << "Rectangle area: " << rectangle->getArea() << endl;
     return 0;
 }
+
+
