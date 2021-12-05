@@ -11,6 +11,7 @@ add_subdirectory(struct_example)
 add_subdirectory(CopyingConstructor)
 add_subdirectory(Operators)
 add_subdirectory(Dziedziczenie)
+add_subdirectory(Notes)
 
 
 
