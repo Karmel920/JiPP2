@@ -12,6 +12,12 @@ add_subdirectory(CopyingConstructor)
 add_subdirectory(Operators)
 add_subdirectory(Dziedziczenie)
 add_subdirectory(Notes)
+add_subdirectory(Conteners)
+add_subdirectory(StopExamples)
+add_subdirectory(MusicPlayer)
+add_subdirectory(Templates)
+add_subdirectory(csvLib)
+add_subdirectory(ProjektKoncowy)
 
 
 
